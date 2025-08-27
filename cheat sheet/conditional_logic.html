@@ -8,7 +8,10 @@
 <body>
     <h2>Er du kvalifisert til å ta førerkort?</h2>
     <p id="carmsg"></p>
+    <h2>Kan spilleren åpne døren?</h2>
     <p id="doormsg"></p>
+    <h2> Kan jeg pansjonere meg?</h2>
+    <p id="retiremsg"></p>
 
     <script>
         const age = 35
@@ -45,7 +48,8 @@
         } else if(age >= 67) {
             retiremsg.innerHTML = "Du kan gå av med full pensjon"
         } else if(age <= 62) {
-            retiremsg.innerHTML = "Du kan ikke gå av med AFP eller full pensjon"
+            retiremsg.innerHTML = `Du kan gå av med AFP om ${62 - age} år, og full pensjom om ${67 - age} år.`
+            retiremsg.innerHTML = "Du kan gå av med AFP om " + 62 - age + " år"
         }
     </script>
 </body>
