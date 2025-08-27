@@ -10,10 +10,11 @@
     <p id="carmsg"></p>
     <h2>Kan spilleren åpne døren?</h2>
     <p id="doormsg"></p>
-    <h2> Kan jeg pansjonere meg?</h2>
+    <h2> Kan jeg pansjonere</h2>
     <p id="retiremsg"></p>
 
     <script>
+        //Førerkort
         const age = 35
         const tg_passed = true
         
@@ -30,7 +31,7 @@
 
         let utskrift = document.getElementById("doormsg")
 
-        if(door_locked === false){
+        if(door_locked === false) {
             utskrift.innerHTML = "Ja"
         } else {
             if(backpack === "key"){
@@ -49,8 +50,7 @@
             retiremsg.innerHTML = "Du kan gå av med full pensjon"
         } else if(age <= 62) {
             retiremsg.innerHTML = `Du kan gå av med AFP om ${62 - age} år, og full pensjom om ${67 - age} år.`
-            retiremsg.innerHTML = "Du kan gå av med AFP om " + 62 - age + " år"
-        }
+            }
     </script>
 </body>
 </html>
