@@ -40,8 +40,13 @@
         let retiremsg = document.getElementById("retire")
 
         //Sjekk av mulig pensjonsalder
-
-        
+        if(age >= 62 && age < 67) {
+            retiremsg.innerHTML = "Du kan gå av med AFP"
+        } else if(age >= 67) {
+            retiremsg.innerHTML = "Du kan gå av med full pensjon"
+        } else if(age <= 62) {
+            retiremsg.innerHTML = "Du kan ikke gå av med AFP eller full pensjon"
+        }
     </script>
 </body>
 </html>
