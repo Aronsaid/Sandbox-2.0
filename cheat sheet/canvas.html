@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+   
+</head>
+<style>
+    #drawing-area{
+        border: 2px solid black;
+    }
+</style>
+<body>
+    <canvas id="drawing-area"></canvas> 
+    <script>
+
+            // <style>
+        //#drawing-area{ 
+          //  width: 800px;
+            //height: 600px;
+        //}
+
+    //</style>
+
+    const mainColor = "#00FFFF"
+
+    const canvas = document.getElementById("drawing-area")
+    const ctx = canvas.getContext("2d")
+
+    canvas.width = 800
+    canvas.height = 600
+
+    const rectangle = {
+        x: 100,
+        y: 500,
+        width: 600,
+        height: 100
+    }
+
+    const circle = {
+        x: 200,
+        y: 100,
+        radius: 10
+    }
+
+    //Tegne streker
+    ctx.beginPath()
+    ctx.moveTo(0, 0)
+    ctx.lineTo(800, 600)
+    ctx.moveTo(800, 0)
+    ctx.lineTo(0,600)
+    ctx.stroke()
+    ctx.closePath()
+
+    //Tegne rektangel
+    ctx.beginPath()
+    ctx.rect(rectangle.x, rectangle.y, rectangle.width, rectangle.height)
+    ctx.fillStyle = mainColor
+    ctx.fill()
+    ctx.stroke()
+    ctx.closePath()
+
+    //Tegne sirkel
+    ctx.beginPath()
+    ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI)
+    ctx.fillStyle = "gold"
+    ctx.fill()
+    ctx.closePath()
+
+    //Tekst
+    ctx.beginPath()
+    ctx.font = "150px Coic Sans"
+    ctx.strokeText("5", 360, 420)
+    ctx.font = "24px Helvetica"
+    ctx.fillStyle = "purple"
+    ctx.fillText("Thor", 200, 200)
+
+    </script>
+</body>
+</html>

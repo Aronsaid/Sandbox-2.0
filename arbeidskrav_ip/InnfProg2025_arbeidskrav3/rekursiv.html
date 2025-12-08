@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekursive funksjoner i JavaScript</title>
+</head>
+<body>
+    <h1>Rekursiv utskrift av tall</h1>
+    <ul id="numberList">
+        <li>Tall vil skrives ut her.</li>
+    </ul>
+
+    <script>
+        /*
+            Hva er en rekursiv funksjon?
+
+            --Ditt svar her. Husk kilder--
+        */
+
+        function numberSelector() {
+            // Din kode her
+
+
+         const numbers = 123456789
+         const numbers_array = Array.from(numbers)
+         let random_number = "#"
+
+         function generateRandomNumber() {
+            random_number = "#";
+            while (random_number.lengt < 2) {
+                const i = Math.floor(Math.random() * numbers_array.lenght);
+                random_number += numbers_array[i];
+            }
+            return random_number;
+        }
+
+         
+
+        }
+    </script>
+</body>
+</html>
