@@ -28,16 +28,11 @@
         
         console.log(hexadecimal_characters_array)
     
-        function generateRandomHexCode(lenght) {
-            random_color_code = '#'
-            random_color_code += hexadecimal_characters_array(Math.floor(Math.random() * 6))
-            document.getElementById("random_color").innerHTML = "Ja"
-        
+        for (let i = 0; i < 6; i++)
+        random_color_code += hexadecimal_characters_array[(Math.floor(Math.random() * 16))];
 
-            console.log("random_color", random_color_code)
-
-
-        } 
+        console.log(random_color_code)
+        document.getElementById("random_color").innerHTML = random_color_code
 
         //PROBLEM 2
         const programming_words = ["variabel","funksjon","array","objekt","loop","betingelse","klasse","rekursjon","algoritme","kompilator"]
