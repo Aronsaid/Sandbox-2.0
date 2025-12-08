@@ -16,7 +16,7 @@
     <p>Finnes ordet "problemløsning" i Programmeringsord-arrayen? <span id="problemlosning_sjekk"></span></p>
     <h2>Problem 3</h2>
     <p>Gjennomsnittet av tallene i tall_array_en er <span id="avg_array_one"></span></p>
-    <p>Gjennomsnittet av tallene i tall_array_to er <span id="avg_array_one"></span></p>
+    <p>Gjennomsnittet av tallene i tall_array_to er <span id="avg_array_two"></span></p>
 
     <script>
         //PROBLEM 1
@@ -26,34 +26,86 @@
         
         //Din kode for å løse problem 1 her.
         
+        console.log(hexadecimal_characters_array)
+    
+        function generateRandomHexCode(lenght) {
+            random_color_code = '#'
+            random_color_code += hexadecimal_characters_array(Math.floor(Math.random() * 6))
+            document.getElementById("random_color").innerHTML = "Ja"
         
-        function generateRandomHexCode() {
-            random_color_code = "#";
-            while (random_color_code.lengt < 7) {
-                const i = Math.floor(Math.random()*exadecimal_characters_array.lenght);
-                random_color_code += hexadecimal_characters_array[i];
-            }
-            return random_color_code;
-        }
 
-        function renderHex(){ 
-            const hex = generateRandomHexCode();
-            document.getElementById('random_color').textContent=hex;
-            console.log("Your hex number is:",enerateRandomHexCode()); 
-        }
-        
-        renderHex();
+            console.log("random_color", random_color_code)
+
+
+        } 
 
         //PROBLEM 2
         const programming_words = ["variabel","funksjon","array","objekt","loop","betingelse","klasse","rekursjon","algoritme","kompilator"]
 
         //Din kode for å løse problem 2 her.
 
+        console.log(programming_words)
+
+
+        if (programming_words.includes("betingelse")) {
+            document.getElementById("betingelse_sjekk").innerHTML = "Ja"
+        } else {
+            document.getElementById("betingelse_sjekk").innerHTML = "Nei"
+        }
+
+        if (programming_words.includes("algoritme")) {
+            document.getElementById("algoritme_sjekk").innerHTML = "Ja"
+        } else {
+            document.getElementById("algoritme_sjekk").innerHTML = "Nei"
+        }
+
+        if (programming_words.includes("problemlosning")) {
+            document.getElementById("problemlosning_sjekk").innerHTML = "Ja"
+        } else {
+            document.getElementById("problemlosning_sjekk").innerHTML = "Nei"
+        }
+
+
+
         //PROBLEM 3
         const tall_array_en = [9, 13, 5, 62, 11, 6, 28, 31, 17]
         const tall_array_to = [23, 76, 88, 13, 56, 90, 42]
 
         //Din kode for å løse problem 3 her.
+
+        //Array En
+
+        const tall_array_en_lenght = tall_array_en.length
+
+        const sum1 = tall_array_en.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+
+
+        const gjennomsnitt1 = sum1 / tall_array_en_lenght
+        
+        console.log(gjennomsnitt1)
+
+        document.getElementById("avg_array_one").innerHTML = gjennomsnitt1
+
+
+        //Array To
+
+        const tall_array_to_lenght = tall_array_to.length
+
+        const sum2 = tall_array_to.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+
+        const gjennomsnitt2 = sum2 / tall_array_to_lenght
+        
+        console.log(gjennomsnitt2)
+
+        document.getElementById("avg_array_two").innerHTML = gjennomsnitt2
+
+
+
+
+
+
+    
+        
     </script>
 </body>
 </html>
