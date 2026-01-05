@@ -18,26 +18,38 @@
             --Ditt svar her. Husk kilder--
         */
 
-        function numberSelector() {
+        //function numberSelector() {
             // Din kode her
 
 
-         const numbers = 123456789
+         const numbers = "123456789"
          const numbers_array = Array.from(numbers)
-         let random_number = "#"
+         let random_number = ""
 
-         function generateRandomNumber() {
-            random_number = "#";
-            while (random_number.lengt < 2) {
-                const i = Math.floor(Math.random() * numbers_array.lenght);
-                random_number += numbers_array[i];
-            }
-            return random_number;
+         console.log(numbers_array)
+         
+         const TheNumbers = "4, 7"
+
+         for (let i = 1; i < 2; i++)
+         random_number += numbers_array[(Math.floor(Math.random() * 9))];
+
+         if TheNumbers = false {
+
+          for (let i = 1; i < 2; i++)
+         random_number += numbers_array[(Math.floor(Math.random() * 9))];
+    
+         } else {
+           
+            console.log(random_number)
+         document.getElementById("numberList").innerHTML = random_number
+         
         }
-
          
 
-        }
+         
+        //}
+
+       
     </script>
 </body>
 </html>
